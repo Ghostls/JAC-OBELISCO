@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAC Motors Venezuela</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans antialiased overflow-x-hidden">
+
+    <div class="relative min-h-screen flex flex-col">
+        
+        <header class="relative py-12 px-4 sm:px-6 lg:px-8 text-center overflow-hidden z-10">
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 opacity-80 z-0"></div>
+            <div class="relative z-10">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-blue-400 leading-tight tracking-wide">
+                    BIENVENIDOS
+                </h1>
+                <p class="mt-4 text-lg font-light max-w-2xl mx-auto text-gray-400">
+                    Con nosotros, la compra de tu vehículo JAC es más fácil. Como parte de nuestra comunidad, tienes un crédito preaprobado directo y sin intermediarios.
+                </p>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12 z-20">
+            <section class="mb-16">
+                <div class="max-w-md mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-gray-100 mb-6">Síguenos en nuestras redes</h2>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://www.instagram.com/jacobelisco/" target="_blank" class="social-btn group">
+                            <i class="fab fa-instagram text-3xl group-hover:text-pink-500 transition-colors"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto bg-gray-800 rounded-2xl shadow-xl p-6 transition-transform hover:scale-105 duration-300 transform" id="flyerContainer">
+                    <img src="Pre aprobado de JAC Obelisco.png" 
+                         alt="Flyer del evento JAC Obelisco" 
+                         class="w-full h-auto rounded-xl shadow-lg border-2 border-gray-700">
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto text-center bg-gray-800 rounded-2xl shadow-xl p-6">
+                    <h2 class="text-3xl font-bold text-gray-100 mb-6 flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-blue-400 mr-3 animate-pulse"></i> ¿CÓMO LLEGAR?
+                    </h2>
+                    <div class="map-container rounded-xl overflow-hidden shadow-lg border-2 border-gray-700">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.416731517158!2d-69.35594032436092!3d10.0648989719134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e87678137dbcfcd%3A0xd04e89f0d928dc4f!2sJAC%20Obelisco!5e0!3m2!1ses!2sve!4v1756148310341!5m2!1ses!2sve" 
+                                width="100%" 
+                                height="450" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"></iframe>
+                    </div>
+                    <a href="https://maps.app.goo.gl/TUqN5jS4hHj9hXv37" 
+                       target="_blank" 
+                       class="mt-6 inline-flex items-center px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300 group">
+                        <i class="fas fa-location-arrow mr-3 text-lg group-hover:animate-bounce"></i>
+                        Abrir en Google Maps
+                    </a>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto text-center bg-gray-800 rounded-2xl shadow-xl p-6">
+                    <h2 class="text-3xl font-bold text-gray-100 mb-6 flex items-center justify-center">
+                        <i class="fas fa-car text-blue-400 mr-3"></i> CONOCE MÁS
+                    </h2>
+                    <div class="video-container rounded-xl overflow-hidden shadow-lg border-2 border-gray-700">
+                        <video controls poster="T9.mp4" class="w-full h-full object-cover">
+                            <source src="T9.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="py-8 bg-gray-900 border-t border-gray-700">
+            <div class="container mx-auto px-4 text-center text-gray-500">
+                <p class="text-sm">&copy; 2025 JAC OBELISCO. Todos los derechos reservados. <span class="font-bold text-blue-400">JAC Motors Venezuela</span>.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
