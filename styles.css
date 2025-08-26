@@ -1,140 +1,60 @@
-/* Definición de variables CSS para paleta de colores moderna */
-:root {
-    --jac-dark-blue: #1E3A8A;
-    --jac-mid-blue: #3B82F6;
-    --jac-light-blue: #60A5FA;
-    --jac-gray-900: #111827;
-    --jac-gray-800: #1F2937;
-    --jac-gray-700: #374151;
-    --jac-blue-400: #60A5FA;
+/* Reglas CSS personalizadas para mejorar Tailwind */
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+.font-poppins { font-family: 'Poppins', sans-serif; }
+
+.shadow-3xl {
+    box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3);
 }
 
-/* Estilos globales para la tipografía y el fondo */
-body {
-    background-color: var(--jac-gray-900);
-    color: var(--jac-light-blue);
-    font-family: 'Poppins', sans-serif;
+.gradient-bg {
+    background: linear-gradient(135deg, #f0f4f8 0%, #e3e6e9 100%);
 }
 
-/* Estilos de títulos con un toque moderno */
-h1, h2, h3 {
-    color: var(--jac-light-blue);
-    font-weight: 700;
-    transition: color 0.3s ease-in-out;
-}
-
-h1 {
-    text-shadow: 0 0 15px var(--jac-blue-400);
-    animation: text-pulse 3s infinite ease-in-out;
-}
-
-@keyframes text-pulse {
-    0%, 100% {
-        text-shadow: 0 0 10px var(--jac-blue-400), 0 0 20px rgba(96, 165, 250, 0.5);
-    }
-    50% {
-        text-shadow: 0 0 20px var(--jac-blue-400), 0 0 30px rgba(96, 165, 250, 0.8);
-    }
-}
-
-/* Estilos para las tarjetas y contenedores */
-.card-container {
-    background-color: var(--jac-gray-800);
-    border: 1px solid var(--jac-gray-700);
-    border-radius: 1.5rem;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    padding: 1.5rem;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.card-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilos para los botones sociales */
-.social-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: var(--jac-gray-800);
-    color: var(--jac-light-blue);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1), 0 5px 15px rgba(0, 0, 0, 0.2);
+/* Efecto de borde animado para la sección del flyer */
+.animated-border {
     position: relative;
     overflow: hidden;
+    background: white; /* Asegura un fondo sólido */
 }
 
-.social-btn::before {
+.animated-border::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120%;
-    height: 120%;
-    background: radial-gradient(circle, rgba(96, 165, 250, 0.5) 0%, transparent 70%);
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: conic-gradient(from 180deg at 50% 50%, #3b82f6 0deg, #60a5fa 90deg, #3b82f6 180deg, #60a5fa 270deg, #3b82f6 360deg);
+    animation: rotate 4s linear infinite;
+    z-index: -1;
+    border-radius: 1.5rem;
 }
 
-.social-btn:hover::before {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-.social-btn:hover {
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 0 20px rgba(96, 165, 250, 0.8);
-}
-
-/* Estilos específicos para íconos */
-.fa-facebook-f:hover { color: #1877f2; }
-.fa-instagram:hover { color: #E1306C; }
-.fa-twitter:hover { color: #1DA1F2; }
-.fa-youtube:hover { color: #FF0000; }
-
-/* Estilo para los contenedores de mapa y video */
-.map-container, .video-container {
-    height: 450px;
+/* Estilo de botón con efecto de resplandor (glow) */
+.glow-btn {
     position: relative;
-    z-index: 10;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* Animaciones para íconos */
-.animate-pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+.glow-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: linear-gradient(45deg, #3b82f6, #60a5fa, #3b82f6);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: -1;
 }
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: .5;
-    }
+.glow-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
 }
-
-.animate-bounce {
-    animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(-25%);
-        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-    }
-    50% {
-        transform: translateY(0);
-        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    }
-}
-
-/* Estilos para el footer */
-footer {
-    background-color: var(--jac-gray-900);
-    border-top: 1px solid var(--jac-gray-700);
+.glow-btn:hover::before {
+    opacity: 1;
+    filter: blur(8px);
 }
